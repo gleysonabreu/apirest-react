@@ -44,7 +44,7 @@ export default class Main extends Component{
               <h2>Name: {user.name} {user.lastname}</h2>
               <strong>Company: {user.company}</strong>
               <div className="actions">
-                <Link to={`/delete/`}>Delete</Link>
+                <Link to={`/users/delete/${user.id}`}>Delete</Link>
                 <Link to={`/users/edit/${user.id}`}>Edit</Link>
               </div>
             </div>

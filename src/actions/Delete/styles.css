@@ -1,0 +1,11 @@
+#message_erro{
+  color: #000;
+  background: #EDB230;
+  border-radius: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 20px;
+  text-decoration: none;
+}
