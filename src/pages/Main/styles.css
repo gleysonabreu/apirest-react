@@ -1,0 +1,67 @@
+.links{
+  margin: 50px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.users-list{
+  display: contents;
+  justify-content: center;
+  align-items: center;
+}
+.user{
+  background: #656e80;
+  border-radius: 16px;
+  padding:5px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  }
+.user h2{
+  font-size: 18px;
+  padding:0;
+  margin-block-end: 0em;
+}
+.user strong{
+  font-size: 17px;
+}
+.actions{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  align-items: center;
+}
+.actions a{
+  color: #FFF;
+  background: #EDB230;
+  text-decoration: none;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.actions a:hover{
+  background: #FFD151;
+}
+.message{
+  background-color: #EDB230;
+  padding: 20px;
+  border-radius: 16px;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.link-add{
+  background: #09BC8A;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.link-add:hover{
+  background: #35C89F;
+}
+.erro{
+  display: contents;
+  justify-content: center;
+  align-items: center;
+}
