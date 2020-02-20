@@ -4,9 +4,13 @@ My previously developed api rest application is now being consumed by this react
 Link repository: [APIREST PHP WITH SLIM V2](https://github.com/gleysonabreu/apirest)<br>
 
 ## IMAGES
+Home
 ![HOME](https://i.imgur.com/Cnh9vEm.png)
+ADD USER
 ![ADD](https://i.imgur.com/O1hSVlZ.png)
+EDIT USER
 ![EDIT](https://i.imgur.com/ahG71pT.png)
+DELETE USER
 ![DELETE](https://i.imgur.com/n8wXfgp.png)
 
 ## INSTALL
