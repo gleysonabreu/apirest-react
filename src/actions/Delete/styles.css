@@ -1,11 +1,67 @@
-#message_erro{
-  color: #000;
-  background: #EDB230;
+.users-list{
+  max-width: 700px;
+  margin: 20px auto 0;
+  padding:0 20px;
+}
+.users-list article.user{
+  background: #0090C1;
   border-radius: 16px;
-  text-align: center;
-  text-transform: uppercase;
+  padding:20px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #38AECC;
+}
+.users-list article.user strong{
+  color: #183446;
+}
+.users-list article.user h2{
+  color: #F2F2F2;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size:22px;
   font-weight: bold;
-  font-size: 17px;
-  padding: 20px;
+}
+.users-list article.user h3{
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  color:#f2f2f2;
+}
+.users-list article.user .actions{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.users-list article.user .actions a[name=del], a[name=edi]{
+  background-color: #CC444B;
+  padding: 14px;
+  color: #F2F2F2;
   text-decoration: none;
+  border-radius: 16px;
+  border-bottom:3px solid #DA5552;
+  transition: all 0.3s;
+  outline: none;
+  font-weight: bold;
+}
+.users-list article.user .actions a[name=edi]{
+  background: #EDB230;
+  border-color: #FFD151;
+  color: #000;
+}
+.users-list article.user .actions a[name=del]:hover{
+  background-color: #DA5552;
+}
+.users-list article.user .actions a[name=edi]:hover{
+  background: #FFD151;
+}
+.users-list article.nodata-found{
+  background: #0090C1;
+  text-align: center;
+}
+.users-list article.nodata-found h2{
+  color: #000;
+  text-transform: uppercase;
 }

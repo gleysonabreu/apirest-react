@@ -1,19 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { BrowserRouter, Outlet, Switch } from 'react-router-dom';
+import { BrowserRouter, Outlet } from 'react-router-dom';
 import Routes from './routes';
+import Header from './componetns/Header';
+import Footer from './componetns/Footer';
 
 function App() {
   return (
-    <div className="App-header">
       <>
       <BrowserRouter>
+        <Header />
         <Routes />
+        <Footer />
       </BrowserRouter>
-      <Outlet />
       </>
-    </div>
   );
 }
 

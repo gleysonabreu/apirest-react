@@ -11,6 +11,7 @@ export default class Add extends Component {
   
   send = async (event) => {
     event.preventDefault();
+    document.querySelector(".text-error").style.display = "block";
 
     let company = document.querySelector("input[name=company]").value;
     let name = document.querySelector('input[name=name]').value;
@@ -38,21 +39,21 @@ export default class Add extends Component {
 
   render(){
   return (
-    <div className="form">
-
+    <div className="add-user">
       <form onSubmit={this.send} method="post" encType="multipart/form-data">
         <ul>
+        <div className="text-error">
+          {this.state.message}
+        </div>
           <li><input type="text" name="name" placeholder="Digite um nome" /></li>
           <li><input type="text" name="lastname" placeholder="Digite um sobrenome" /></li>
           <li><input type="text" name="company" placeholder="Digite sua empresa" /></li>
-          <li><input type="submit" name="submit" value="send" /></li>
-          <br />
-          <li><Link to={`/`} className="link-back">Back</Link></li>
+          <div className="actions">
+          <input type="submit" name="submit" value="send" />
+          <Link to={`/`}>Back</Link>
+          </div>
         </ul>
       </form>
-        <div className="textM">
-          {this.state.message}
-        </div>
     </div>
   )};
 

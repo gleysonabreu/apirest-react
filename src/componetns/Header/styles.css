@@ -1,0 +1,28 @@
+.header{
+  padding:10px;
+  background: #0090C1;
+  height:70px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:3px solid #38AECC;
+}
+.header h3{
+    color: #F2F2F2;
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size:25px;
+    font-weight: bold;
+}
+.link-add{
+  background:#09BC8A;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 16px;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+}

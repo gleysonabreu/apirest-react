@@ -23,7 +23,8 @@ export default function Update() {
     var company = document.querySelector("input[name=company]");
     var name = document.querySelector('input[name=name]');
     var lastname = document.querySelector('input[name=lastname]');
-    var div = document.querySelector("#textM");
+    var div = document.querySelector(".text-error");
+    div.style.display = "block";
     if(company === '' || name === '' || lastname === ''){
       div.innerHTML = "Fill in all fields.";
     }else{
@@ -44,19 +45,19 @@ export default function Update() {
 
   
   return (
-    <div className="form">
-
+    <div className="add-user">
       <form onSubmit={update} method="post" encType="multipart/form-data">
         <ul>
+        <div className="text-error"></div>
           <li><input type="text" name="name" placeholder="Digite um nome" /></li>
           <li><input type="text" name="lastname" placeholder="Digite um sobrenome" /></li>
           <li><input type="text" name="company" placeholder="Digite sua empresa" /></li>
-          <li><input type="submit" name="submit" value="send" /></li>
-          <br />
-          <li><Link to={`/`} className="link-back">Back</Link></li>
+          <div className="actions">
+          <input type="submit" name="submit" value="send" />
+          <Link to={`/`}>Back</Link>
+          </div>
         </ul>
       </form>
-        <div className="textM" id="textM"></div>
     </div>
   );
 }

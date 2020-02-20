@@ -27,31 +27,28 @@ export default class Main extends Component{
     const {users, message} = this.state;
     if(users.length <= 0){
       return (
-        <div className="erro">
-          <Link to={`/users/add`} className="message link-add">Add user</Link>
-          <p className="message">{message}</p>
+        <div className="users-list">
+          <article className="user nodata-found">
+            <h2 className="message">{message}</h2>
+          </article>
+          
         </div>
       );
     }else{
     return (
-      <div className="links">
-        <div>
-        <Link to={`/users/add`} className="message link-add">Add user</Link>
-        </div>
         <div className="users-list">
           {users.map(user => (
-            <div className="user" key={user.id}>
-              <h2>Name: {user.name} {user.lastname}</h2>
-              <strong>Company: {user.company}</strong>
+            <article className="user" key={user.id}>
+              <h2><strong>Name:</strong> {user.name} {user.lastname}</h2>
+              <h3><strong>Company:</strong> {user.company}</h3>
               <div className="actions">
-                <Link to={`/users/delete/${user.id}`}>Delete</Link>
-                <Link to={`/users/edit/${user.id}`}>Edit</Link>
+                <Link name="del" to={`/users/delete/${user.id}`}>Delete</Link>
+                <Link name="edi" to={`/users/edit/${user.id}`}>Edit</Link>
               </div>
-            </div>
+            </article>
           ))
           }
         </div>
-      </div>
       )
     }
   };

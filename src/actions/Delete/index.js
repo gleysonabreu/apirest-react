@@ -1,7 +1,7 @@
 import React from 'react';
 import api from '../../services/api';
 import { useParams, Link } from "react-router-dom";
-import './styles.css';
+import '../../pages/Main/styles.css';
 
 export default function Delete() {
   
@@ -16,9 +16,13 @@ export default function Delete() {
   del();
 
   return (
-    <div>
-      <div id="message_erro" className="message_erro"></div><br/>
-      <Link to={`/`} id="message_erro">Back</Link>
-    </div>
+
+    <div className="users-list">
+          <article className="user nodata-found-user">
+            <h2 className="message message_erro"></h2>
+            <Link to={`/`} name="edi">BACK</Link>
+          </article>
+          
+        </div>
   );
 }

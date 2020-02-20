@@ -1,0 +1,20 @@
+.global{
+  max-width: 700px;
+  margin: 20px auto 0;
+  padding:0 20px;
+}
+.global h1{
+  background: #FFF;
+  border-radius: 16px;
+  padding:20px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #CCC;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+.global .outlet{
+  margin: 20px auto 0;
+  padding:0 20px;
+}
