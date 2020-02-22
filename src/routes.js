@@ -7,6 +7,7 @@ import User  from './pages/User';
 import Add from './actions/Add';
 import Delete from './actions/Delete';
 import Update from './actions/Update';
+import NotFound from './componetns/NotFound';
 
 const MainRoutes = () => (
   <Routes>
@@ -16,7 +17,7 @@ const MainRoutes = () => (
         <Route path="delete/:id" element={<Delete />}/>
         <Route path="edit/:id" element={<Update />}/>
     </Route>
-    <Route path="*" element={<h1>Not Found</h1>} />
+    <Route path="*" element={<NotFound />} />
   </Routes>
 );
 

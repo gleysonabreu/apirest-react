@@ -4,7 +4,7 @@ footer{
   padding: 5px;
   text-align: center;
   box-sizing: border-box;
-  float: both;
+  position: relative;
 }
 footer p{
   font-size: 18px;

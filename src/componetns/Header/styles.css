@@ -1,11 +1,15 @@
 .header{
-  padding:10px;
+  width: 100%;
   background: #0090C1;
   height:70px;
   display:flex;
   justify-content: space-between;
   align-items: center;
   border-bottom:3px solid #38AECC;
+  position: fixed;
+  top:0;
+  box-sizing: border-box;
+  padding: 10px;
 }
 .header h3{
     color: #F2F2F2;
