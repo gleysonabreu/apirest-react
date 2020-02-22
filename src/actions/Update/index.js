@@ -9,6 +9,7 @@ export default function Update() {
 
   const returnData = async () => {
     let res  = await api.get(`/users/${id}/Gla123`);
+    loading = false;
     document.querySelector("input[name=company]").value = res.data.company;
     document.querySelector('input[name=name]').value = res.data.name;
     document.querySelector('input[name=lastname]').value = res.data.lastname;
@@ -19,6 +20,7 @@ export default function Update() {
   const update = async (event) => {
 
     event.preventDefault();
+    loading = true;
     var data = new FormData();
     var company = document.querySelector("input[name=company]");
     var name = document.querySelector('input[name=name]');
@@ -42,7 +44,6 @@ export default function Update() {
     }
 
   }
-
   
   return (
     <div className="add-user">
@@ -59,5 +60,5 @@ export default function Update() {
         </ul>
       </form>
     </div>
-  );
+  )
 }

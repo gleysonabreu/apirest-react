@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
+import Loading from '../../componetns/Loading';
 import './styles.css';
 export default class Main extends Component{
 
   state = {
     users: [],
-    message: ""
+    message: "",
+    loading: true,
   };
 
   componentDidMount(){
@@ -16,14 +18,14 @@ export default class Main extends Component{
   loadUsers = async () =>{
     const response = await api.get(`/users/all/Gla123`);
     if( response.data.message ){
-      this.setState({ message: response.data.message });
+      this.setState({ message: response.data.message, loading: false });
     }else{
-      this.setState({ users: response.data });
+      this.setState({ users: response.data, loading: false });
     }
+
   }
 
-  
-  render() {
+  mainContent = () => {
     const {users, message} = this.state;
     if(users.length <= 0){
       return (
@@ -36,6 +38,7 @@ export default class Main extends Component{
       );
     }else{
     return (
+        <div>
         <div className="users-list">
           {users.map(user => (
             <article className="user" key={user.id}>
@@ -49,7 +52,14 @@ export default class Main extends Component{
           ))
           }
         </div>
+        
+        </div>
       )
     }
+  }
+
+  
+  render() {
+    return this.state.loading ? <Loading /> : <this.mainContent />;
   };
 }
