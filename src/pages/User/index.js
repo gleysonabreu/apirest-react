@@ -10,11 +10,13 @@ export default class User extends Component {
 
   render() {
     return (
-    <div className="global">
-      <h1>Usuários</h1>
+    <div className="wrapper">
+      <div className="global">
+        <h1>Usuários</h1>
 
-      <div className="outlet">
-        <Outlet />
+        <div className="outlet">
+          <Outlet />
+        </div>
       </div>
     </div>
     );

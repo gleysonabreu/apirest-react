@@ -2,6 +2,7 @@
   max-width: 700px;
   margin: 20px auto 0;
   padding:0 20px;
+  min-height: 256px;
 }
 .users-list article.user{
   background: #0090C1;

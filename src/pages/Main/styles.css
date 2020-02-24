@@ -1,8 +1,11 @@
+.no-users{
+  min-height: 409px !important;
+}
 .users-list{
   max-width: 700px;
   margin: 80px auto;
   padding:0 20px;
-  min-height: 100vh;
+  min-height: 256px;
   }
 .users-list article.user{
   background: #0090C1;

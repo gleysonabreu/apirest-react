@@ -30,7 +30,7 @@ export default class Main extends Component{
     const {users, message} = this.state;
     if(users.length <= 0){
       return (
-        <div className="users-list">
+        <div className="no-users users-list">
           <article className="user nodata-found">
             <h2 className="message">{message}</h2>
           </article>
@@ -39,8 +39,7 @@ export default class Main extends Component{
       );
     }else{
     return (
-        <div>
-        <div className="users-list">
+        <div className="users-list no-users">
           {users.map(user => (
             <article className="user" key={user.id}>
               <h2><strong>Name:</strong> {user.name} {user.lastname}</h2>
@@ -51,9 +50,7 @@ export default class Main extends Component{
               </div>
             </article>
           ))
-          }
-        </div>
-        
+          } 
         </div>
       )
     }
