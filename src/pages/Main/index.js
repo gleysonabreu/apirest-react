@@ -12,6 +12,7 @@ export default class Main extends Component{
   };
 
   componentDidMount(){
+    document.title = "Gleyson Abreu - Home page";
     this.loadUsers();
   }
 

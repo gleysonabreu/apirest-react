@@ -4,6 +4,10 @@ import './styles.css';
 
 export default class User extends Component {
 
+  componentDidMount(){
+    document.title = "Gleyson Abreu - Users";
+  }
+
   render() {
     return (
     <div className="global">

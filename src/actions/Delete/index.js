@@ -10,6 +10,7 @@ export default function Delete() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "Gleyson Abreu - Delete users";
     async function data(){
       const res = await api.get(`/users/delete/${id}/Gla123`);
       setLoading(false);

@@ -10,6 +10,7 @@ export default function Update() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "Gleyson Abreu - Update users";
     async function data(){
       let res  = await api.get(`/users/${id}/Gla123`);
       setLoading(false);

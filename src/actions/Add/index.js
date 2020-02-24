@@ -13,6 +13,7 @@ export default class Add extends Component {
 
 
   componentDidMount(){
+    document.title = "Gleyson Abreu - Add Users";
     this.setState({loading: false});
   }
   
