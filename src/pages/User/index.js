@@ -1,15 +1,18 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Outlet } from 'react-router-dom';
 import './styles.css';
 
-export default function User() {
-  return (
-  <div className="global">
-    <h1>Usuários</h1>
+export default class User extends Component {
 
-    <div className="outlet">
-      <Outlet />
+  render() {
+    return (
+    <div className="global">
+      <h1>Usuários</h1>
+
+      <div className="outlet">
+        <Outlet />
+      </div>
     </div>
-  </div>
-  );
+    );
+  }
 }

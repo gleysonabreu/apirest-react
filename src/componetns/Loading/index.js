@@ -5,11 +5,11 @@ import logo from '../../logo.svg';
 
 export default function Loading() {
   return (
-    <div className="loading">
+    <div className="loading" id="loading">
       <div className="loading-image">
         <img src={logo} />
       </div>
-      <h1>Gleyson</h1>
+      <h1 className="title">Gleyson</h1>
     </div>
   );
 }

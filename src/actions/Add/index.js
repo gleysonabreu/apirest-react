@@ -2,28 +2,41 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css';
 import api from '../../services/api';
+import Loading from '../../componetns/Loading';
 
 export default class Add extends Component {
 
   state = {
-    message: ""
+    message: "",
+    loading: true
+  }
+
+
+  componentDidMount(){
+    this.setState({loading: false});
   }
   
   send = async (event) => {
     event.preventDefault();
-    document.querySelector(".text-error").style.display = "block";
-
+    
+    let divError = document.querySelector(".text-error");
     let company = document.querySelector("input[name=company]").value;
     let name = document.querySelector('input[name=name]').value;
     let lastname = document.querySelector('input[name=lastname]').value;
+    let add_submit = document.querySelector("input[name=add_submit]");
+    add_submit.value = "Sending...";
+    add_submit.disabled = 'disabled';
     if(company === '' || name === '' || lastname === ''){
-        this.setState({message: "Fill in all fields."});
+      divError.style.display = "block";
+      this.setState({message: "Fill in all fields."});
+      add_submit.value = "Send";
+      add_submit.disabled = null;
     }else{
       var data = new FormData();
       data.set("name", name);
       data.set("lastname", lastname);
       data.set("company", company);
-
+      divError.style.display = "block";
       this.setState({ message: "Creating user..." });
       const response = await api({
         method: "post",
@@ -34,12 +47,15 @@ export default class Add extends Component {
 
       const { message } = response.data;
       this.setState({ message });
+      add_submit.value = "Send";
+      add_submit.disabled = null;
     }
   }
 
-  render(){
-  return (
-    <div className="add-user">
+  mainContent = () => {
+
+    return (
+      <div className="add-user">
       <form onSubmit={this.send} method="post" encType="multipart/form-data">
         <ul>
         <div className="text-error">
@@ -49,12 +65,20 @@ export default class Add extends Component {
           <li><input type="text" name="lastname" placeholder="Digite um sobrenome" /></li>
           <li><input type="text" name="company" placeholder="Digite sua empresa" /></li>
           <div className="actions">
-          <input type="submit" name="submit" value="send" />
+          <input type="submit" name="add_submit" value="send" />
           <Link to={`/`}>Back</Link>
           </div>
         </ul>
       </form>
     </div>
-  )};
+    )
+    
+  }
+
+  render(){
+
+    return this.state.loading ? <Loading /> : <this.mainContent />;
+
+  };
 
 }
