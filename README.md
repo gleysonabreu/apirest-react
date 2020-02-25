@@ -25,7 +25,7 @@ npm install
 ```
 
 ## YARN START
-Execute this command in tour command terminal for start your project<br>
+Execute this command in your command terminal for start your project<br>
 ```
 yarn start
 or
