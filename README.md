@@ -4,21 +4,33 @@ My previously developed api rest application is now being consumed by this react
 Link repository: [APIREST PHP WITH SLIM V2](https://github.com/gleysonabreu/apirest)<br>
 
 ## IMAGES
+Loading
+![LOADING](https://i.imgur.com/pdKf2se.png)
 Home
-![HOME](https://i.imgur.com/Cnh9vEm.png)
+![HOME](https://i.imgur.com/gjyQycz.png)
 ADD USER
-![ADD](https://i.imgur.com/O1hSVlZ.png)
+![ADD](https://i.imgur.com/qe4jrcZ.png)
 EDIT USER
-![EDIT](https://i.imgur.com/ahG71pT.png)
+![EDIT](https://i.imgur.com/AXT2J0Q.png)
 DELETE USER
-![DELETE](https://i.imgur.com/n8wXfgp.png)
+![DELETE](https://i.imgur.com/BDHVSeF.png)
 
 ## INSTALL
-- Download [APIREST PHP WITH SLIM V2](https://github.com/gleysonabreu/apirest)
-- Download [Consuming API WITH REACTJS](https://github.com/gleysonabreu/apirest-react)
-NOW INSTALL XAMP OR WAMPSERVER TO USE APIREST PHP WITH SLIM V2<br>
+- INSTALL [APIREST PHP WITH SLIM V2](https://github.com/gleysonabreu/apirest)
+- INSTALL [Consuming API WITH REACTJS](https://github.com/gleysonabreu/apirest-react)
+Clone or download zip this directory on any folder directory in your computer.<br>
+Execute this command in your command terminal.
+```
+npm install
+```
 
 ## YARN START
+Execute this command in tour command terminal for start your project<br>
+```
+yarn start
+or
+npm start
+```
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
 
@@ -27,6 +39,3 @@ You will also see any lint errors in the console.<br>
 
 ## Developers
 - Gleyson Abreu
-
-## LEARN MORE
-This project not finalized.
