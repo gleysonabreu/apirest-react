@@ -7,7 +7,7 @@ export default function Loading() {
   return (
     <div className="loading" id="loading">
       <div className="loading-image">
-        <img src={logo} />
+        <img src={logo} alt="Loading" />
       </div>
       <h1 className="title">Gleyson</h1>
     </div>
