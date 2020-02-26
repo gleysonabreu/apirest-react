@@ -1,7 +1,7 @@
 ## Project to run apirest
 
 My previously developed api rest application is now being consumed by this reactjs application.<br>
-Link repository: [APIREST PHP WITH SLIM V2](https://github.com/gleysonabreu/apirest)<br>
+Link repository: [APIREST PHP WITH SLIM V3](https://github.com/gleysonabreu/apirest)<br>
 
 ## IMAGES
 Loading
@@ -16,7 +16,7 @@ DELETE USER
 ![DELETE](https://i.imgur.com/BDHVSeF.png)
 
 ## INSTALL
-- INSTALL [APIREST PHP WITH SLIM V2](https://github.com/gleysonabreu/apirest)
+- INSTALL [APIREST PHP WITH SLIM V3](https://github.com/gleysonabreu/apirest)
 - INSTALL [Consuming API WITH REACTJS](https://github.com/gleysonabreu/apirest-react)
 Clone or download zip this directory on any folder directory in your computer.<br>
 Execute this command in your command terminal.
@@ -36,6 +36,10 @@ Open http://localhost:3000 to view it in the browser.
 
 The page will reload if you make edits.
 You will also see any lint errors in the console.<br>
+
+## HEROKU
+This web site online in HEROKU APP<br>
+[APIREST REACTJS](https://apirest-reactjs.herokuapp.com/);
 
 ## Developers
 - Gleyson Abreu
