@@ -1,0 +1,92 @@
+.add-user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-user form input[type=text], input[type=password]{
+  width: 300px;
+  padding: 25px;
+  margin-bottom: 10px;
+  border-radius: 16px;
+  border:0;
+  outline: 0;
+  background-color: #0090C1;
+  border-bottom:3px solid #38AECC;
+  font-size: 16px;
+}
+.add-user form input[type=text], input[type=password]::placeholder{
+  color: #FFF;
+}
+.add-user form .actions{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.add-user form .actions input[type=submit]{
+  background: #38AECC;
+  border-radius: 16px;
+  border: 0;
+  width: 150px;
+  padding: 20px;
+  outline: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: medium;
+  cursor: pointer;
+  border-bottom:3px solid #0090C1;
+  transition: all 0.3s;
+}
+.add-user form .actions input[type=submit]:hover{
+  background-color: #0090C1;
+}
+.add-user form .actions a{
+  background: #EDB230;
+  width: 100px;
+  border-radius: 16px;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: medium;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  border-bottom:3px solid #FFD151;
+  transition: all 0.3s;
+}
+.add-user form .actions a:hover{
+  background-color: #FFD151;
+}
+.add-user form .text-error{
+  text-align: center;
+  background-color: #EDB230;
+  margin-bottom: 12px;
+  border-radius: 16px;
+  text-transform: uppercase;
+  font-size: medium;
+  font-weight: bold;
+  padding:20px;
+  transition: all 0.3s;
+  display: none;
+}
+
+.global{
+  max-width: 700px;
+  margin: 80px auto;
+  padding:0 20px;
+  height: 100%;
+}
+.global h1{
+  background: #FFF;
+  border-radius: 16px;
+  padding:20px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #CCC;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+.global .outlet{
+  margin: 20px auto 0;
+  padding:0 20px;
+}

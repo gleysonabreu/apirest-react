@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './styles.css';
 import api from '../../services/api';
 import Loading from '../../componetns/Loading';
+import {isAuthenticated} from '../../services/auth';
 
 export default class Add extends Component {
 
@@ -32,7 +33,7 @@ export default class Add extends Component {
       this.setState({message: "Fill in all fields."});
       add_submit.value = "Send";
       add_submit.disabled = null;
-    }else{
+    }else if(isAuthenticated() === true){
       var data = new FormData();
       data.set("name", name);
       data.set("lastname", lastname);
@@ -48,6 +49,11 @@ export default class Add extends Component {
 
       const { message } = response.data;
       this.setState({ message });
+      add_submit.value = "Send";
+      add_submit.disabled = null;
+    }else{
+      divError.style.display = "block";
+      this.setState({ message: "Unauthenticated user!" });
       add_submit.value = "Send";
       add_submit.disabled = null;
     }

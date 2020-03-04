@@ -3,6 +3,8 @@ import api from '../../services/api';
 import { useParams, Link } from 'react-router-dom';
 import './styles.css';
 import Loading from '../../componetns/Loading';
+import Modal from '../../componetns/Modal';
+import { isAuthenticated } from '../../services/auth';
 
 export default function Update() {
 
@@ -11,6 +13,8 @@ export default function Update() {
 
   useEffect(() => {
     document.title = "Gleyson Abreu - Update users";
+
+    if(isAuthenticated() === true){
     async function data(){
       let res  = await api.get(`/users/${id}/Gla123`);
       setLoading(false);
@@ -19,7 +23,9 @@ export default function Update() {
       document.querySelector('input[name=name]').value = res.data.name;
       document.querySelector('input[name=lastname]').value = res.data.lastname;
     }
-    data();
+      data();
+    }
+
   }, [id])
 
   const update = async (event) => {
@@ -75,6 +81,13 @@ export default function Update() {
     </div>
     )
   }
+  //loading ? <Loading /> : mainContent();
   
-  return loading ? <Loading /> : mainContent();
+  if(loading === true && isAuthenticated() === true){
+    return <Loading />;
+  }else if(isAuthenticated() === false){
+    return <Modal />;
+  }else{
+    return mainContent();
+  }
 }

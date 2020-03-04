@@ -3,6 +3,8 @@ import api from '../../services/api';
 import { useParams, Link } from "react-router-dom";
 import '../../pages/Main/styles.css';
 import Loading from '../../componetns/Loading';
+import Modal from '../../componetns/Modal';
+import { isAuthenticated } from '../../services/auth';
 
 export default function Delete() {
   
@@ -11,13 +13,16 @@ export default function Delete() {
 
   useEffect(() => {
     document.title = "Gleyson Abreu - Delete users";
-    async function data(){
-      const res = await api.get(`/users/delete/${id}/Gla123`);
-      setLoading(false);
-      const inner = document.querySelector(".message_erro");
-      inner.innerHTML = res.data.message;
+    
+    if(isAuthenticated() === true){
+      async function data(){
+        const res = await api.get(`/users/delete/${id}/Gla123`);
+        setLoading(false);
+        const inner = document.querySelector(".message_erro");
+        inner.innerHTML = res.data.message;
+      }
+      data();
     }
-    data();
     
   }, [id]);
 
@@ -33,5 +38,11 @@ export default function Delete() {
     )
   }
 
-  return loading ? <Loading /> : mainContent();
+  if(loading === true && isAuthenticated() === true){
+    return <Loading />;
+  }else if(isAuthenticated() === false){
+    return <Modal />;
+  }else{
+    return mainContent();
+  }
 }
