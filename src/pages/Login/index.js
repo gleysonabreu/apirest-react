@@ -36,13 +36,13 @@ export default class Login extends Component {
         data: data,
         headers: {'Content-Type': 'multipart/form-data'}
       });
-      if(response.data.jwt){
-        login(response.data.jwt);
-      }
       this.setState({message: response.data.message});
       login_submit.value = "Login";
       login_submit.disabled = null;
-      window.location.href="/";
+      if(response.data.jwt){
+        login(response.data.jwt);
+        window.location.href="/";
+      }
     }
 
   }
