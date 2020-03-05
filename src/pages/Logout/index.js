@@ -1,15 +1,25 @@
-import React, { useEffect } from 'react';
+import React,{useEffect, useState} from 'react';
 import { logout } from '../../services/auth';
 import { Redirect } from 'react-router-dom';
+import { browserHistory } from 'react-router';
 
-export default function Logout() {
-  
-  useEffect(() => {
+function Logout(){
+
+  const [redirect, setRedirect] = useState(false);
+
+  const exit = () => {
     logout();
-    window.location.href='/';
-  }, [])
-  
-  return (
-    <div />
-  );
+    setRedirect(true);
+  }
+
+  useEffect(
+    () => {
+      exit();
+    },
+  [])
+    
+    return redirect ?  window.location.href="/": window.location.href="/";
+
 }
+
+export default Logout;
