@@ -12,7 +12,7 @@ export default class User extends Component {
     return (
     <div className="wrapper">
       <div className="global">
-        <h1>Usuários</h1>
+        <h1>Users</h1>
 
         <div className="outlet">
           <Outlet />

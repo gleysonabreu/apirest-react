@@ -25,10 +25,12 @@ export default class Add extends Component {
     let company = document.querySelector("input[name=company]").value;
     let name = document.querySelector('input[name=name]').value;
     let lastname = document.querySelector('input[name=lastname]').value;
+    let email = document.querySelector('input[name=email]').value;
+    let password = document.querySelector('input[name=password]').value;
     let add_submit = document.querySelector("input[name=add_submit]");
     add_submit.value = "Sending...";
     add_submit.disabled = 'disabled';
-    if(company === '' || name === '' || lastname === ''){
+    if(company === '' || name === '' || lastname === '' || password === '' || email === ''){
       divError.style.display = "block";
       this.setState({message: "Fill in all fields."});
       add_submit.value = "Send";
@@ -38,6 +40,8 @@ export default class Add extends Component {
       data.set("name", name);
       data.set("lastname", lastname);
       data.set("company", company);
+      data.set("email", email);
+      data.set("password", password);
       divError.style.display = "block";
       this.setState({ message: "Creating user..." });
       const response = await api({
@@ -68,9 +72,11 @@ export default class Add extends Component {
         <div className="text-error">
           {this.state.message}
         </div>
-          <li><input type="text" name="name" placeholder="Digite um nome" /></li>
-          <li><input type="text" name="lastname" placeholder="Digite um sobrenome" /></li>
-          <li><input type="text" name="company" placeholder="Digite sua empresa" /></li>
+          <li><input type="text" name="name" placeholder="Enter your first name" /></li>
+          <li><input type="text" name="lastname" placeholder="Enter your last name" /></li>
+          <li><input type="text" name="company" placeholder="Enter your companny" /></li>
+          <li><input type="text" name="email" placeholder="Enter your e-mail" /></li>
+          <li><input type="password" name="password" placeholder="Enter your password" /></li>
           <div className="actions">
           <input type="submit" name="add_submit" value="send" />
           <Link to={`/`}>Back</Link>

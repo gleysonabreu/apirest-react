@@ -11,6 +11,13 @@
   box-sizing: border-box;
   padding: 10px;
 }
+.header .infos{
+  display: inline-flex;
+  align-items: center;
+}
+.header .infos img{
+  height: 70px;
+}
 .header h3{
     color: #F2F2F2;
     display: block;
